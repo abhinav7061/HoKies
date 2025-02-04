@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JTF FE Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="center">
+    <main class="max-width">
+        <!-- --------------------- HEADER ------------------ -->
+        <header class="container xPadding">
+            <h1 class="logo">HoKies</h1>
+            <nav class="container header-nav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Menu</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="container nav-icons">
+                <span class="search-icon" role="button">
+                    <img src="assets/search_icon.png" alt="search" class="icon">
+                </span>
+                <span class="cart-icon" id="cartIcon" role="button">
+                    <img src="assets/cart_icon.png" alt="cart" class="icon">
+                    <div class="cart-alert"></div>
+                    <!-- 🛒 -->
+                </span>
+                <span class="hamburger" id="hamburger" role="button">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </span>
+            </div>
+        </header>
+
+        <!-- --------------------- HERO SECTION ------------------ -->
+        <section class="hero xPadding">
+            <div class="hero-content">
+                <h2>Authentic Home </h2>
+                <h2> food in India</h2>
+                <div class="hero-para">
+                    <p>HoKies is a courier service in which authentic home </p>
+                    <p> cook food is delivered to a customer.</p>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search food you love">
+                    <button id="orderNow">Search</button>
+                </div>
+            </div>
+            <div class="center">
+                <img src="assets/cuate.png" alt="cuate img" class="hero-image">
+            </div>
+        </section>
+
+        <!-- --------------------- KITCHEN SECTION ------------------ -->
+        <section class="kitchen-section xPadding yPadding">
+            <h2 class="heading">Home Kitchen</h2>
+            <div class="kitchen-cards" id="kitchenCards">
+                <!-- Kitchen cards will be dynamically added here -->
+            </div>
+        </section>
+
+        <!-- --------------------- CAROUSEL SECTION ------------------ -->
+        <section class="popular-items">
+            <h2 class="heading">Popular Items</h2>
+            <div class="carousel" id="carousel">
+                <!-- <button class="carousel-arrow left-arrow">❮</button> -->
+                <button class="carousel-arrow left-arrow">
+                    <span class="arrow backward">
+                        <svg viewBox="0 0 21 31" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19.0405 13.2941C20.405 14.4892 20.405 16.6125 19.0405 17.8077L5.40326 29.7517C3.46381 31.4504 0.426661 30.0731 0.426661 27.495L0.426662 3.60678C0.426662 1.02863 3.46381 -0.348662 5.40326 1.34999L19.0405 13.2941Z" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="carouselItems" class="carousel-items">
+                    <!-- Carousel items will be dynamically added here -->
+                </div>
+                <button class="carousel-arrow right-arrow">
+                    <span class="arrow forward">
+                        <svg viewBox="0 0 21 31" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19.0405 13.2941C20.405 14.4892 20.405 16.6125 19.0405 17.8077L5.40326 29.7517C3.46381 31.4504 0.426661 30.0731 0.426661 27.495L0.426662 3.60678C0.426662 1.02863 3.46381 -0.348662 5.40326 1.34999L19.0405 13.2941Z" />
+                        </svg>
+                    </span>
+                </button>
+                <!-- <button class="carousel-arrow right-arrow">❯</button> -->
+            </div>
+            <button id="request-dish-button" class="btn">Request a Dish</button>
+        </section>
+
+        <!-- --------------------- VIDEO SECTION ------------------ -->
+        <div class="video-section yPadding">
+            <h2 class="heading">We are providing best </h2>
+            <h2 class="heading"> home cooked food delivery service.</h2>
+            <div class="video-para">
+                <p> Away from home and craving the tasty homemade recipes? </p>
+                <p> Choose from selection of our delicious home cooked dishes </p>
+            </div>
+            <div class="video container">
+                <video src="assets/820383c7fa134c9792d9a693b22d75c1.mp4" class="cooking-vid" id="video"
+                    onclick="playPauseVideo()">
+                    Video format not supported
+                </video>
+                <div class="play-pause-effect container" onclick="playPauseVideo()"></div>
+            </div>
+            <div class="green-color"></div>
+        </div>
+
+        <!-- --------------------- CONTACT SECTION ------------------ -->
+        <div class="contact-section xPadding">
+            <div class="subpart1">
+                <div class="question">
+                    <p>Do you have a question</p>
+                    <p>or want to become a seller?</p>
+                    <p class="fill">
+                        Fill this form and our manager will contact you next 48 hours.
+                    </p>
+                </div>
+                <form action="#" class="forms">
+                    <div class="input-group">
+                        <input type="text" placeholder="Your name" class="input" />
+                        <input type="text" placeholder="Your e-mail" class="input" />
+                    </div>
+                    <textarea placeholder="Your message" class="input contact-message"></textarea>
+                    <button type="button" class="btn submit-btn">Submit</button>
+                </form>
+            </div>
+            <div class="center">
+                <img src="assets/Food_delivery_cute_man_riding_motorcycles_cartoon_art_illustration 2.svg"
+                    alt="food-delivery" class="contact-image" />
+            </div>
+        </div>
+
+        <!-- --------------------- FOOTER SECTION ------------------ -->
+        <footer class="xPadding">
+            <div class="container footer-head">
+                <h1 class="logo">HoKies</h1>
+                <nav class="container footer-nav">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Menu</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact</a>
+                </nav>
+                <div class="container footer-icons">
+                    <img src="assets/Facebook.svg" alt="">
+                    <img src="assets/Instagram.svg" alt="">
+                </div>
+            </div>
+        </footer>
+
+        <!-- --------------------- MODALS ------------------ -->
+        <div class="modal" id="cartModal">
+            <div class="modal-content max-width cart-modal-content">
+                <span class="close" id="closeCartModal">&times;</span>
+                <img src="assets/cart.svg" alt="">
+                <h2 class="heading">Cart is Empty</h2>
+                <p>Add some items to the cart to checkout</p>
+                <button id="backToMenu" class="btn">Back to Menu</button>
+            </div>
+        </div>
+
+        <div class="modal" id="requestDishModal">
+            <div class="modal-content max-width request-modal-content">
+                <span class="close" id="closeRequestDishModal">&times;</span>
+                <h2 class="heading">Request a Dish</h2>
+                <form>
+                    <div class="input-1">
+                        <p>Name *</p>
+                        <input type="text" placeholder="Dish name" class="input" />
+                    </div>
+                    <div class="input-2">
+                        <p>Upload an image</p>
+                        <input type="text" placeholder="Paste a URL" class="input" />
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="cancelRequest" class="btn btn-outline">Cancel</button>
+                        <button type="button" id="submitRequest" class="btn">Submit Request</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
